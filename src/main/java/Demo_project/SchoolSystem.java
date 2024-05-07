@@ -67,6 +67,9 @@ public class SchoolSystem {
         applicants.display(applicants1);
         applicants.display(applicants2);
 
+        System.out.println("Admission Denied Data");
+        applicants.admitStudent(applicants1);
+
 
 
     }
