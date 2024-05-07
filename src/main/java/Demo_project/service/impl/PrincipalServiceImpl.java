@@ -7,7 +7,7 @@ public class PrincipalServiceImpl implements PrincipalService {
     @Override
     public void display(Principal principal) {
 
-        System.out.println("FullName : " + principal.getName() + "\n" + "Gender : " + principal.getName() + "\n" +
+        System.out.println("FullName : " + principal.getName() + "\n" + "Gender : " + principal.getGender() + "\n" +
                 "Age : " +  principal.getAge());
     }
 }
