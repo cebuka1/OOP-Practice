@@ -4,6 +4,7 @@ import Demo_project.enums.CourseOffer;
 import Demo_project.enums.Gender;
 import Demo_project.model.*;
 import Demo_project.service.PrincipalService;
+import Demo_project.service.impl.ApplicantServiceImpl;
 import Demo_project.service.impl.PrincipalServiceImpl;
 import Demo_project.service.impl.StudentServiceImpl;
 import Demo_project.service.impl.TeachableServiceImpl;
@@ -24,6 +25,7 @@ public class SchoolSystem {
 
         Applicants applicants1 = new Applicants("Harzard Chelsea", 32, Gender.TRANS_GENDER);
         Applicants applicants2 = new Applicants("monster thunder", 45, Gender.MALE);
+        ApplicantServiceImpl applicants = new ApplicantServiceImpl();
 
         TeachableServiceImpl teachableService1 = new TeachableServiceImpl();
         TeachableServiceImpl teachableService2 = new TeachableServiceImpl();
@@ -52,6 +54,20 @@ public class SchoolSystem {
         System.out.println("Student data");
         takeCourse2.takeCourse(student2, course4);
         System.out.println("**************************************");
+
+        System.out.println("Principal data");
+        principalService.display(principal);
+        System.out.println("**************************************");
+
+        System.out.println("Student Expelled Data");
+        expelStudent.expelStudent(student, principal);
+        System.out.println("***************************************");
+
+        System.out.println("Applicant Data");
+        applicants.display(applicants1);
+        applicants.display(applicants2);
+
+
 
     }
 }
