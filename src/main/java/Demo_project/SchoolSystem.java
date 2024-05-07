@@ -2,9 +2,10 @@ package Demo_project;
 
 import Demo_project.enums.CourseOffer;
 import Demo_project.enums.Gender;
-import Demo_project.model.Course;
-import Demo_project.model.Student;
-import Demo_project.model.Teacher;
+import Demo_project.model.*;
+import Demo_project.service.PrincipalService;
+import Demo_project.service.impl.PrincipalServiceImpl;
+import Demo_project.service.impl.StudentServiceImpl;
 import Demo_project.service.impl.TeachableServiceImpl;
 
 public class SchoolSystem {
@@ -14,6 +15,15 @@ public class SchoolSystem {
 
         Course course1 = new Course(CourseOffer.JAVA);
         Course course2 = new Course(CourseOffer.PYTHON);
+
+        Principal principal = new Principal("John mary", 100, Gender.MALE);
+        PrincipalServiceImpl principalService = new PrincipalServiceImpl();
+
+        Student student = new Student("chief love", 34, Gender.FEMALE);
+        StudentServiceImpl expelStudent = new StudentServiceImpl();
+
+        Applicants applicants1 = new Applicants("Harzard Chelsea", 32, Gender.TRANS_GENDER);
+        Applicants applicants2 = new Applicants("monster thunder", 45, Gender.MALE);
 
         TeachableServiceImpl teachableService1 = new TeachableServiceImpl();
         TeachableServiceImpl teachableService2 = new TeachableServiceImpl();
@@ -25,8 +35,6 @@ public class SchoolSystem {
         System.out.println("Teacher Data");
         teachableService2.teachCourse(teacher2, course2);
         System.out.println("**********************************************");
-
-
 
         Student student1 = new Student( "Mike ebuka", 23, Gender.MALE);
         Student student2 = new Student("Agborom lola", 36, Gender.FEMALE);
